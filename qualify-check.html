@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="四癌篩檢補助資訊網，介紹台中市轄區內癌症篩檢的補助資訊，總共有四項癌症補助：口腔癌(口腔黏膜檢查)、乳癌(乳房X光攝影檢查)、大腸癌(糞便潛血檢查)、子宮頸癌 (子宮頸抹片檢查)。"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>四癌篩檢補助 | 補助資格查詢</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/qualify-check.css" />
+    <!-- Preload -->
+    <link rel="preload" href="./images/checkbox-checked.svg" as="image" />
+  </head>
+  <body>
+    <!-- LOGO + 導覽列 -->
+    <div class="header">
+      <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./images/logo.svg" class="logo" alt="四癌篩檢補助 Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#dropdownMenu"
+          aria-controls="dropdownMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img src="./images/burger.svg" alt="Toggle Menu Button" />
+        </button>
+        <div class="collapse navbar-collapse" id="dropdownMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="introduce.html" class="nav-link">四癌篩檢介紹</a>
+            </li>
+            <li class="nav-item active">
+              <a href="qualify-check.html" class="nav-link">補助資格查詢</a>
+            </li>
+            <li class="nav-item">
+              <a href="hospital-list.html" class="nav-link">篩檢機構查詢</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- 主要內容 -->
+    <main class="container text-center">
+      <h1>四癌篩檢補助資格查詢</h1>
+      <!-- 查詢表單 -->
+      <section
+        class="qualify-check-section row justify-content-center align-items-end flex-nowrap no-gutters"
+      >
+        <div
+          class="check-form row flex-column justify-content-center no-gutters"
+        >
+          <div
+            class="row flex-column flex-md-row justify-content-left justify-content-md-between align-items-center no-gutters"
+          >
+            <label
+              for="selectBirthYear"
+              class="birth-year-label row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters"
+            >
+              出生年份
+              <select id="selectBirthYear" class="birth-year mx-3">
+                <option value="0">載入中...</option>
+              </select>
+            </label>
+            <div class="d-block d-md-none hr-border"></div>
+            <div
+              class="gender-box row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters"
+            >
+              性別
+              <label
+                for="male"
+                class="gender-label row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters"
+              >
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  checked
+                />
+                <span></span> 男性
+              </label>
+              <label
+                for="female"
+                class="gender-label row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters ml-3"
+              >
+                <input type="radio" id="female" name="gender" value="female" />
+                <span></span> 女性
+              </label>
+            </div>
+          </div>
+          <span class="check-choice-ask text-left"
+            >請勾選您過去兩年內已經篩檢過的項目! (可複選)</span
+          >
+          <div class="row justify-content-between no-gutters">
+            <label
+              for="oralCancer"
+              class="check-choice row align-items-center flex-nowrap no-gutters"
+            >
+              <input
+                type="checkbox"
+                id="oralCancer"
+                value="5"
+                data-name="口腔癌"
+              />
+              <span></span>口腔癌 (口腔黏膜檢查)
+            </label>
+            <label
+              for="breastCancer"
+              class="check-choice row align-items-center flex-nowrap no-gutters"
+            >
+              <input
+                type="checkbox"
+                id="breastCancer"
+                value="2"
+                data-name="乳癌"
+              />
+              <span></span>乳癌 (乳房X光攝影檢查)
+            </label>
+            <label
+              for="colorectalCancer"
+              class="check-choice row align-items-center flex-nowrap no-gutters"
+            >
+              <input
+                type="checkbox"
+                id="colorectalCancer"
+                value="7"
+                data-name="大腸癌"
+              />
+              <span></span>大腸癌 (糞便潛血檢查)
+            </label>
+            <label
+              for="uterineCancer"
+              class="check-choice row align-items-center flex-nowrap no-gutters"
+            >
+              <input
+                type="checkbox"
+                id="uterineCancer"
+                value="3"
+                data-name="子宮頸癌"
+              />
+              <span></span>子宮頸癌 (子宮頸抹片檢查)
+            </label>
+          </div>
+          <div
+            class="btn-box row justify-content-center justify-content-lg-end no-gutters"
+          >
+            <button class="btn btn-reset-layout btn-reset" onclick="refresh()">
+              重新填寫
+            </button>
+            <button class="btn btn-check-layout btn-check">馬上查詢</button>
+          </div>
+        </div>
+      </section>
+      <!-- 資格檢查結果 -->
+      <section
+        class="result-section row justify-content-center align-items-start no-gutters"
+      >
+        <div class="condition">
+          <div class="d-inline-block text-left">
+            <p class="text-nowrap">您查詢的條件為 :</p>
+            <p class="text-nowrap">
+              <span class="span-birth-year">1960</span>
+              年，
+              <span class="span-gender">女性</span>，
+            </p>
+            <span class="span-choices">過去兩年曾做過大腸癌篩檢</span>。
+          </div>
+        </div>
+        <div
+          class="result-box row justify-content-center align-items-end align-items-sm-start flex-nowrap no-gutters w-100"
+        >
+          <img
+            class="qualify-check-doctor"
+            src="./images/qualify-check-doctor.svg"
+            alt=""
+          />
+          <div class="p-box row flex-column align-items-start no-gutters">
+            <p class="p-line-1">您目前符合的補助資格如下:</p>
+            <p class="p-line-2">乳癌、子宮頸癌</p>
+            <p class="p-line-3">健康不能等，<span class="text-nowrap">即使沒有補助</span><span class="text-nowrap">也要記得篩檢喔!</span></p>
+            <div
+              class="btn-arrow-row row flex-column flex-md-row justify-content-between flex-wrap flex-lg-nowrap no-gutters"
+            >
+              <a
+                href="hospital-list.html"
+                class="btn-link-arrow-layout btn-link row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters"
+              >
+                <p class="d-none d-xxl-block">馬上搜尋篩檢機構吧!!!</p>
+                <p class="d-block d-xxl-none">搜尋篩檢機構</p>
+                <span></span
+              ></a>
+              <a
+                href="javascript:;"
+                onclick="refresh()"
+                class="btn-refresh-arrow-layout btn-refresh row justify-content-center align-items-center flex-nowrap text-nowrap no-gutters"
+              >
+                <p class="d-none d-xxl-block">我想重新查詢!</p>
+                <p class="d-block d-xxl-none">我想重新查詢</p>
+                <span></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- 表尾資訊 -->
+    <footer>
+      <div class="row justify-content-between align-items-center no-gutters">
+        <p class="col-lg-6 col-md-12 p-0 text-center text-lg-left">
+          <span class="text-nowrap">Copyright © 2022 </span>
+          <span class="text-nowrap">Screening for Four Major Cancers </span>
+          <span class="text-nowrap">| Taichung Version</span>
+        </p>
+        <p class="col-lg-6 col-md-12 p-0 text-center text-lg-right">
+          資料來源 :
+          <a href="https://www.mohw.gov.tw/" target="_blank">衛生福利部</a>、<a
+            href="https://www.health.taichung.gov.tw/"
+            target="_blank"
+            >臺中市衛生局</a
+          >&nbsp;<span class="d-inline d-lg-none">(截至2022.05.31)</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Javascript -->
+    <script src="./js/jquery.slim.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/qualify-check.js"></script>
+  </body>
+</html>

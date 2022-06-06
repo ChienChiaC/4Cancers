@@ -1,0 +1,356 @@
+// 保留這一行 @import，下面寫各自頁面的 CSS
+@import 'all';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sec {
+    margin-top: 38px;
+    hr {
+        margin-bottom: 100px;
+    }
+}
+
+.row {
+    .change {
+        margin-bottom: 100px;
+
+        .titleArea {
+            text-align: left;
+
+            h3 {
+                font-size: 30px;
+                font-weight: 700;
+                color: #275544;
+            }
+
+            h5 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #B26D2C;
+            }
+        }
+
+        .card {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+            iframe {
+                height: 375px;
+            }
+
+            .card-body {
+                height: 515px;
+                padding: 60px;
+                background: #FFFBE3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    h5 {
+                        font-size: 28px;
+                        font-weight: 800;
+                        color: #595947;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #595947;
+                    }
+                }
+
+                div {
+                    button {
+                        background-color: #723010;
+                        color: white;
+                        font-size: 25px;
+                        font-weight: 700;
+                        padding: 16px 26px;
+                        letter-spacing: 4px;
+                        border-radius: 50px;
+
+                        span {
+                            img {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .row {
+        .change {
+            .titleArea {
+                h3 {
+                    font-size: 20px;
+                }
+
+                h5 {
+                    font-size: 16px;
+                }
+            }
+
+            .card {
+                iframe {
+                    height: 300px;
+                }
+
+                .card-body {
+                    height: 530px;
+
+                    div {
+                        h5 {
+                            font-size: 28px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+
+                    div {
+                        button {
+                            font-size: 22px;
+                            padding: 15px 25px;
+                            letter-spacing: 4px;
+                            border-radius: 50px;
+
+                            span {
+                                img {
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .row {
+        .change {
+            .titleArea {
+                h3{
+                    font-size: 25px;
+                }
+                h5 {
+                    font-size: 16px;
+                }
+            }
+            .card {
+                iframe {
+                    height: 300px;
+                }
+
+                .card-body {
+                    div {
+                        button {
+                            span {
+                                img {
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .sec {
+        h1 {
+            font-size: 35px;
+        }
+
+        hr {
+            margin-bottom: 60px;
+        }
+    }
+
+    .row {
+        .change {
+            margin-bottom: 60px;
+
+            .titleArea {
+                text-align: center;
+
+                h5 {
+                    font-size: 16px;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .card {
+                iframe {
+                    height: 229px;
+                }
+
+                .card-body {
+                    height: 400px;
+                    padding: 20px;
+
+                    div {
+                        h5 {
+                            font-size: 22px;
+                            margin-bottom: 12px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    div {
+                        button {
+                            margin-bottom: 11px;
+                            padding: 13px 18px;
+                            font-size: 18px;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sec {
+        margin-top: 0;
+        h1{
+            font-size: 30px;
+        }
+    }
+
+    .row {
+        .change {
+            .titleArea {
+                h3 {
+                    font-size: 25px;
+                }
+
+                h5 {
+                    font-size: 18px;
+                }
+            }
+
+            .card {
+                .bodyHight1 {
+                    height: unset;
+                }
+
+                .bodyHight2 {
+                    height: unset;
+                }
+
+                .bodyHight3 {
+                    height: unset;
+                }
+
+                .bodyHight4 {
+                    height: unset;
+                }
+
+                .card-body {
+                    padding: 35px;
+
+                    div {
+                        h5 {
+                            font-size: 25px;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    div {
+                        button {
+                            margin: 11px;
+                            padding: 13px 18px;
+                            font-size: 18px;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    .sec  {
+        margin-top: 0;
+        h1{
+            font-size: 24px;
+        }
+        hr{
+            margin-bottom: 30px;
+        }
+    }
+
+    .row {
+        .change {
+            padding: 0 20px;
+            .titleArea {
+                h3 {
+                    font-size: 20px;
+                }
+
+                h5 {
+                    font-size: 14px;
+                }
+            }
+            .card {
+                iframe {
+                    height: unset;
+                }
+                .bodyHight1 {
+                    height: unset;
+                }
+
+                .bodyHight2 {
+                    height: unset;
+                }
+
+                .bodyHight3 {
+                    height: unset;
+                }
+
+                .bodyHight4 {
+                    height: unset;
+                }
+
+                .card-body {
+                    padding: 25px;
+                    div {
+                        h5 {
+                            font-size: 20px;
+                        }
+                    }
+                    div {
+
+                        button {
+                            padding: 13px 13px;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

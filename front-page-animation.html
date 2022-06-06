@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="網站介紹台中市轄區內癌症篩檢的補助資訊，總共有四項癌症補助：口腔癌(口腔黏膜檢查)、乳癌(乳房X光攝影檢查)、大腸癌(糞便潛血檢查)、子宮頸癌 (子宮頸抹片檢查)。" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>四癌篩檢補助 | 首頁動畫(暫定)</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/front-page-animation.css" />
+</head>
+
+<body>
+  <!-- 主要內容 -->
+  <main>
+    <div class="loading">
+      <div class="loading-box">
+        <div id="loader"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <section id="front-page-animation" class="loading-complete-animation">
+      <a class="skip-btn" href="javascript:;" onclick="parent.hideIframe()">SKIP ></a>
+      <div class="scroll-btn d-md-none d-block" onclick="scrollDown()"></div>
+      <div class="animation-container">
+        <!-- 第一頁 -->
+        <h2 class="page-1-h2">你知道嗎?</h2>
+        <span class="page-1-span">臺灣每年有超過10,000人死於...</span>
+        <img class="img-earth mobile-hide" src="./images/front-page-animation-earth.svg" alt="">
+        <img class="img-earth mobile-show" src="./images/front-page-animation-earth-mobile.svg" alt="">
+        <div class="scroll-tips mobile-hide">
+          <h3>SCROLL</h3>
+          <img src="./images/front-page-animation-icon.svg" alt="">
+        </div>
+        <div class="scroll-bar mobile-hide">
+          <div class="circle page-1"></div>
+          <div class="circle page-2"></div>
+          <div class="circle page-3"></div>
+          <div class="circle page-4"></div>
+          <div class="circle page-5"></div>
+        </div>
+
+        <!-- 第二頁 -->
+        <span class="page-2-span pad-hide">乳癌、子宮頸癌、大腸癌、口腔癌</span>
+        <span class="page-2-span pad-show">乳癌、子宮頸癌大腸癌、口腔癌</span>
+        <img class="img-cell-1 mobile-hide" src="./images/front-page-animation-cell-1.svg" alt="">
+        <img class="img-cell-2 mobile-hide" src="./images/front-page-animation-cell-2.svg" alt="">
+        <img class="img-cell-1 mobile-show" src="./images/front-page-animation-cell-1-mobile.svg" alt="">
+        <img class="img-cell-2 mobile-show" src="./images/front-page-animation-cell-2-mobile.svg" alt="">
+
+        <!-- 第三頁 -->
+        <div class="page-3-title-box">
+          <h2 class="page-3-h2">每10分27秒</h2>
+          <span class="page-3-span">就有一人因癌症死亡...</span>
+        </div>
+        <img class="img-clock mobile-hide clock-1" src="./images/front-page-animation-clock.svg" alt="">
+        <div class="pointer"></div>
+        <img class="img-clock mobile-hide clock-2" src="./images/front-page-animation-clock(1).svg" alt="">
+        <img  class="img-clock mobile-hide clock-3"  src="./images/front-page-animation-clock(2).svg" alt="">
+        <img  class="img-clock mobile-hide clock-4"  src="./images/front-page-animation-clock(3).svg" alt="">
+        <img class="img-clock mobile-show clock-mobile" src="./images/front-page-animation-clock-mobile.svg" alt="">
+
+        <!-- 第四頁 -->
+        <div class="page-4-title-box">
+          <h2 class="page-4-h2">依WHO及實證醫學證明</h2>
+          <span class="page-4-span">提早篩檢可有效降低癌症死亡率。</span>
+        </div>
+
+        <img class="img-cell-3 mobile-hide" src="./images/front-page-animation-cell-3.svg" alt="">
+        <img class="img-cell-4 mobile-hide" src="./images/front-page-animation-cell-4.svg" alt="">
+        <img class="img-magnifier mobile-hide" src="./images/front-page-animation-magnifier.svg" alt="">
+        <img class="img-cell-3 mobile-show" src="./images/front-page-animation-cell-3-mobile.svg" alt="">
+        <img class="img-cell-4 mobile-show" src="./images/front-page-animation-cell-4-mobile.svg" alt="">
+        <img class="img-magnifier mobile-show" src="./images/front-page-animation-magnifier-mobile.svg" alt="">
+
+        <!-- 第五頁 -->
+        <div class="title-border mobile-hide">
+          <h2 class="brown-title mobile-hide">癌症已連續39年</h2>
+          <h2 class="white-title mobile-hide">位居國人十大死因第一名</h2>
+          <div class="title-box mobile-hide">
+            <span class="green-span mobile-hide">讓我們一起了解</span>
+            <span class="brown-span mobile-hide">四癌篩檢，</span>
+            <span class="brown-span mobile-hide">提早預防</span>
+            <span class="green-span mobile-hide">吧!</span>
+          </div>
+        </div>
+        <div class="title-border mobile-show">
+          <span class="spen-1 ">癌症已經</span>
+          <h2 class="title-1 ">連續39年</h2>
+          <div class="border "></div>
+          <h2 class="title-2 ">國人10大死因</h2>
+          <h2 class="title-3 ">第一名</h2>
+          <span class="spen-2 ">不要再等了...</span>
+          <div class="title-box ">
+            <span class="green-span ">馬上開始了解四癌篩檢吧!</span>
+          </div>
+        </div>
+
+        <img class="img-arrow mobile-hide" src="./images/front-page-animation-arrow.svg" alt="">
+      </div>
+
+
+    </section>
+  </main>
+  <!-- 表尾資訊 -->
+
+  <!-- Javascript -->
+  <script src="./js/jquery.slim.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+  <script src="./js/front-page-animation.js"></script>
+</body>
+
+</html>
